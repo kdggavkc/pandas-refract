@@ -8,7 +8,7 @@ __license__ = "MIT"
 __copyright__ = "Copyright 2018-2019 Nicholas Lawrence"
 
 
-def refract(df, conditional, reset_index=False):
+def refract(df, conditional, reset_index=True:
     """
 
     Return pair of Dataframes split against Truthy and Falseyness of provided array. Option to reset index in place.
