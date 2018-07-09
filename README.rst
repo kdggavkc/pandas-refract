@@ -3,7 +3,7 @@
 pandas-refract: Convenient partitioning by Truthy/Falsey array
 ===============================================
 
-<b>pandas-refract<b> is an MIT licensed Python package with a simple function that
+pandas-refract is an MIT licensed Python package with a simple function that
  allows users to divide their dataframes by the 'Truthy' and 'Falseyness' of a provided array.
  
  
