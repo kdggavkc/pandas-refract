@@ -26,7 +26,7 @@ setup(
     license=pandas_refract.__license__,
     author=pandas_refract.__author__,
     author_email="nickclawrence@gmail.com",
-    py_modules=["pandas-refracts"],
+    py_modules=["pandas-refract"],
     install_requires=[
         'numpy',
     ],
