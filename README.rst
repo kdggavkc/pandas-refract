@@ -38,11 +38,11 @@ or::
     df2 = df[df.column != 'test_string'].reset_index(drop=True)
  
  
-With pandas-refract this becomes
+With pandas-refract this becomes::
     
     df1, df2 = refract(df, df.column.notnull(), True]
     
-and
+and::
 
     df1, df2 = refract(df, df.column == test_string', True]   
     
