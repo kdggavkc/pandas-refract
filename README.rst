@@ -15,6 +15,7 @@ Ideal case would be:
     
     ``non_target_df = df``
     
+    
 What is required now is:
 
     ``target_df = df[df['target_column'] == 'target_value']``
@@ -49,15 +50,17 @@ Examples
     ``df1, df2 = refract(df, df.column == test_string', True]``
     
     
+    
  But you don't have to pass it explicit boolean arrays:
     
     ``data = {'a': ['', 'truthy', '', 'truthy'],
             'b': [0, 1, 2, 3]
             }
+    ``
             
     df = pd.DataFrame(data)
     
-    truthy_df, falsey_df = refract(df, df.a)``
+    truthy_df, falsey_df = refract(df, df.a)
     
     
  More complex examples:
