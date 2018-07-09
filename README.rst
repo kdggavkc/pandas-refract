@@ -27,26 +27,26 @@ however, add a layer of convenience for more complex slicing where you need to s
 Examples
 ========
 
- Simplest example of current Pandas requires::
+Simplest example of current Pandas requires::
  
     df1 = df[df.column.notnull()].reset_index(drop=True)
     df2 = df[df.column.isnull()].reset_index(drop=True)
     
- or 
+or 
     df1 = df[df.column == 'test_string'].reset_index(drop=True)
     df2 = df[df.column != 'test_string'].reset_index(drop=True)
  
  
- With pandas-refract this becomes::
+With pandas-refract this becomes::
     
     df1, df2 = refract(df, df.column.notnull(), True]
     
- and
+and
  
     df1, df2 = refract(df, df.column == test_string', True]   
     
     
- But you don't have to pass it explicit boolean arrays::
+But you don't have to pass it explicit boolean arrays::
     
     data = {'a': ['', 'truthy', '', 'truthy'],
             'b': [0, 1, 2, 3]
@@ -58,9 +58,9 @@ Examples
     truthy_df, falsey_df = refract(df, df.a)
     
     
- More complex examples:
- <br> 
- *(where 'a' is Falsey and 'b' is an odd number)*::
+More complex examples:
+<br> 
+*(where 'a' is Falsey and 'b' is an odd number)*::
       
     df1, df2 = refract(df, ((~df.a) & (df.b % 2 == 1)))
          
