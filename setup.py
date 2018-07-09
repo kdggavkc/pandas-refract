@@ -18,7 +18,7 @@ def read(fn):
 
 
 setup(
-    name="pandas_refract",
+    name="pandas-refract",
     version=pandas_refract.__version__,
     description="Split a dataframe by boolean array",
     long_description=(read("README.rst")),
@@ -26,9 +26,9 @@ setup(
     license=pandas_refract.__license__,
     author=pandas_refract.__author__,
     author_email="nickclawrence@gmail.com",
-    py_modules=["pandas-refract"],
+    py_modules=["pandas_refract"],
     install_requires=[
-        'numpy',
+        'numpy'
     ],
     classifiers=[
         "Intended Audience :: Developers",
