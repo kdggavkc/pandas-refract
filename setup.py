@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from pandas_refract import refract
+import pandas_refract
 import sys
 
 
@@ -19,12 +19,12 @@ def read(fn):
 
 setup(
     name="pandas_refract",
-    version=refract.__version__,
+    version=pandas_refract.__version__,
     description="Split a dataframe by boolean array",
     long_description=(read("README.rst")),
     url="http://github.com/nickclawrence/pandas-refract/",
-    license=refract.__license__,
-    author=refract.__author__,
+    license=pandas_refract.__license__,
+    author=pandas_refract.__author__,
     author_email="nickclawrence@gmail.com",
     py_modules=["pandas-refract"],
     classifiers=[
