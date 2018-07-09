@@ -14,7 +14,6 @@ Ideal case would be::
     target_df = df.pop(df['target_column'] == 'target_value')
     non_target_df = df
     
-    
 What is required now is::
 
     target_df = df[df['target_column'] == 'target_value'] 
@@ -34,7 +33,6 @@ Examples
     df2 = df[df.column.isnull()].reset_index(drop=True)
     
  or 
- ::
     df1 = df[df.column == 'test_string'].reset_index(drop=True)
     df2 = df[df.column != 'test_string'].reset_index(drop=True)
  
@@ -44,9 +42,8 @@ Examples
     df1, df2 = refract(df, df.column.notnull(), True]
     
  and
- ::
-    df1, df2 = refract(df, df.column == test_string', True]
-    
+ 
+    df1, df2 = refract(df, df.column == test_string', True]   
     
     
  But you don't have to pass it explicit boolean arrays::
@@ -63,7 +60,7 @@ Examples
     
  More complex examples:
  <br> 
- *(where 'a' is Falsey and 'b' is an odd number):*
+ *(where 'a' is Falsey and 'b' is an odd number)*::
       
     df1, df2 = refract(df, ((~df.a) & (df.b % 2 == 1)))
          
