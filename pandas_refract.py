@@ -28,11 +28,8 @@ def refract(df, conditional, reset_index=False):
     """
     _conditional = np.asarray(conditional, bool)
 
-    t_df = df[_conditional]
-    f_df = df[~_conditional]
-
     if reset_index:
-        return t_df.reset_index(drop=True),\
-               f_df.reset_index(drop=True)
+        return df[_conditional].reset_index(drop=True),\
+               df[~_conditional].reset_index(drop=True)
 
-    return t_df, f_df
+    return df[_conditional], df[~_conditional]
