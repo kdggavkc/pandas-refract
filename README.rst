@@ -25,7 +25,7 @@ What is required now is:
  Obviously, this package is not providing anything not currently possible in the current Pandas library. It does,
  however, add a layer of convenience for more complex slicing where you need to separate, not remove, rows by conditions.
 
-    
+
 Examples
 ========
 
