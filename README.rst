@@ -32,7 +32,7 @@ Simplest example of current Pandas requires::
     df1 = df[df.column.notnull()].reset_index(drop=True)
     df2 = df[df.column.isnull()].reset_index(drop=True)
     
-or
+or::
 
     df1 = df[df.column == 'test_string'].reset_index(drop=True)
     df2 = df[df.column != 'test_string'].reset_index(drop=True)
