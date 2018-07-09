@@ -32,20 +32,22 @@ Simplest example of current Pandas requires::
     df1 = df[df.column.notnull()].reset_index(drop=True)
     df2 = df[df.column.isnull()].reset_index(drop=True)
     
-or 
+or
+
     df1 = df[df.column == 'test_string'].reset_index(drop=True)
     df2 = df[df.column != 'test_string'].reset_index(drop=True)
  
  
-With pandas-refract this becomes::
+With pandas-refract this becomes
     
     df1, df2 = refract(df, df.column.notnull(), True]
     
 and
+
     df1, df2 = refract(df, df.column == test_string', True]   
     
     
-But you don't have to pass it explicit boolean arrays::
+But you don't have to pass it explicit boolean arrays
     
     data = {'a': ['', 'truthy', '', 'truthy'],
             'b': [0, 1, 2, 3]
