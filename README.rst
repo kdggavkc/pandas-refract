@@ -59,8 +59,8 @@ But you don't have to pass it explicit boolean arrays::
     
     
 More complex examples:
-<br> 
-*(where 'a' is Falsey and 'b' is an odd number)*::
+*(where 'a' is Falsey and 'b' is an odd number)*
+::
       
     df1, df2 = refract(df, ((~df.a) & (df.b % 2 == 1)))
          
