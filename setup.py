@@ -18,7 +18,7 @@ def read(fn):
 
 
 setup(
-    name="pandas-refract",
+    name="pandas_refract",
     version=pandas_refract.__version__,
     description="Split a dataframe by boolean array",
     long_description=(read("README.rst")),
