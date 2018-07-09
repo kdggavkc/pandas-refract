@@ -1,6 +1,6 @@
 from setuptools import setup
 
-import refract
+import pandas_refract import refract
 import sys
 
 
