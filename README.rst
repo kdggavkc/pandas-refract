@@ -37,8 +37,8 @@ Examples
     
  or 
  
-    ``df1 = df[df.column == 'test_string'].reset_index(drop=True)``
-    ``df2 = df[df.column != 'test_string'].reset_index(drop=True)``
+    ::df1 = df[df.column == 'test_string'].reset_index(drop=True)
+    df2 = df[df.column != 'test_string'].reset_index(drop=True)::
  
  
  With pandas-refract this becomes:
