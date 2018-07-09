@@ -3,7 +3,7 @@ import unittest
 
 import pandas as pd
 
-from pandas_refract import refract
+from pandas_refracts import refract
 
 _n = 10000000
 _iter = range(_n)
