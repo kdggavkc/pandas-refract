@@ -11,7 +11,7 @@ pandas-refract: Convenient partitioning by Truthy/Falsey array
 Eventually, the goal of this package is an additional feature to the Pandas library that allows users to .pop rows 
 from a dataframe where a condition is met. As far as I can tell this is not possible like the below example.
 
-Ideal case is something like:
+Ideal case would be:
 
     target_df = df.pop(df['target_column'] == 'target_value')
     non_target_df = df
@@ -22,12 +22,10 @@ What is required now is:
     non_target_df = df[df['target_column'] != 'targe_value']
     
     
- Obviously, this package is not providing anything that is not possible in the current Pandas library. It does however,
- add a layer of convenience for more complex dataframe slicing where you still want 
+ Obviously, this package is not providing anything not currently possible in the current Pandas library. It does,
+ however, add a layer of convenience for more complex slicing where you need to separate, not remove, rows by conditions.
 
     
-    
-
 Examples
 ========
 
