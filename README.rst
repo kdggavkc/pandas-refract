@@ -11,9 +11,8 @@ from a dataframe where a condition is met. As far as I can tell this is not poss
 
 Ideal case would be:
 
-    ``target_df = df.pop(df['target_column'] == 'target_value')`` 
-    
-    ``non_target_df = df``
+    ::target_df = df.pop(df['target_column'] == 'target_value')::
+    ::non_target_df = df::
     
     
 What is required now is:
