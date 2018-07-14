@@ -2,7 +2,7 @@ import numpy as np
 
 
 __title__ = "pandas-refract"
-__version__ = "1.2"
+__version__ = "1.2.0"
 __author__ = "Nicholas Lawrence"
 __license__ = "MIT"
 __copyright__ = "Copyright 2018-2019 Nicholas Lawrence"
