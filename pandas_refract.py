@@ -62,7 +62,7 @@ def disperse(df, label, reset_index=True):
            'medium':   temperature  overcast
                     0    medium     False
                     1    medium      True
-            }
+          }
 
     """
     _notnulls, _nulls = refract(df, df[label].notnull())
