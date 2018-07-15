@@ -2,7 +2,7 @@ import numpy as np
 
 
 __title__ = "pandas-refract"
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 __author__ = "Nicholas Lawrence"
 __license__ = "MIT"
 __copyright__ = "Copyright 2018-2019 Nicholas Lawrence"
@@ -66,12 +66,19 @@ def disperse(df, label, reset_index=True):
 
     """
     _notnulls, _nulls = refract(df, df[label].notnull())
+    _unique_values = set(_notnulls[label])
 
-    _prism = {k: df[df[label] == k] for k in set(_notnulls[label])}
-    _prism['null'] = _nulls
+    _prism = {}
 
     if reset_index:
-        return {k: v.reset_index(drop=True) for k, v in _prism.items()}
+        for val in _unique_values:
+            _prism[val] = _notnulls[_notnulls[label] == val].reset_index(drop=True)
+
+    else:
+        for val in _unique_values:
+            _prism[val] = _notnulls[_notnulls[label] == val]
+
+    if not _nulls.empty:
+        _prism[None] = _nulls
 
     return _prism
-
