@@ -17,7 +17,7 @@ Ideal case would be::
 What is required now is::
 
     target_df = df[df['target_column'] == 'target_value'] 
-    non_target_df = df[df['target_column'] != 'targe_value']
+    non_target_df = df[df['target_column'] != 'target_value']
     
     
 Obviously, this package is not providing anything not currently possible in the current Pandas library. It does,
