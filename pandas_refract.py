@@ -41,7 +41,8 @@ def disperse(df, label, reset_index=True):
     """
 
     Return dictionary where key is a unique value in given dataframe series and value is dataframe where given column is
-    key value.
+    key value. Bad performance for columns with many unique values -- best performance on label-like columns. Will treat
+    nulls and nones as the same label, assigning them to the None key in the returned dictionary.
 
     / >>> data = {'temperature': ['high', 'low', 'low', 'high', 'medium', 'medium'],
                   'overcast'   : [True, False, True, False, False, True]
